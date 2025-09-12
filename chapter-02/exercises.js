@@ -113,13 +113,13 @@ function drawChessboard(x) {
 
   // since the rows and colums are differet, I might need 2 loops for each row??? Prob over thinking it
   //need a board thing
-  let board = ''; // Initialize the board as an empty string.
+  let board = '';
 
   for (let row = 0; row < x; row++) {
-    let line = ''; // Reset the line for each row.
+    let line = ''; // reset the line for each row.
 
     for (let col = 0; col < x; col++) {
-      // Alternate between spaces and hashes for the chessboard pattern.
+      // switch between spaces and hashes
       if ((row + col) % 2 === 0) {
         line += ' ';
       } else {
