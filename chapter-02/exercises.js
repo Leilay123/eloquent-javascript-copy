@@ -26,7 +26,18 @@ LOGS =>
 
 */
 
-function triangles() {
+/**
+ * I: function triangles take an number parameter(size of triangles)
+ * O: return the 'size' of triangles
+ * C:
+ * E:
+ */
+
+function triangles(number) {
+
+for (let i = 1; i <= number; i++){
+  console.log('#'.repeat(i))
+  }
   
 }
 
@@ -48,6 +59,22 @@ on the number:
 */
 
 function fizzBuzz(start, end) {
+
+ // should access each number from start to end (need a loop)
+  for(let i = start; i <= end; i++){
+    if (i % 3 === 0 && i % 5 === 0){ // if number 3 % === 0 && % 5 === 0, log fizzbuzz
+      console.log('fizzbuzz')
+    } else if (i % 3 === 0){// if number % 3 === 0, log fizz
+      console.log('fizz')
+    } else if (i % 5 === 0){// if number % 5 === 0, log buzz
+      console.log('buzz')
+    } else {
+      console.log(i)
+    }
+
+  }
+  
+  //wait woops
   
 }
 
@@ -82,9 +109,33 @@ LOGS =>
 */
 
 function drawChessboard(x) {
+  // x is the size of the chessboard
 
+  // since the rows and colums are differet, I might need 2 loops for each row??? Prob over thinking it
+  //need a board thing
+  let board = ''; // Initialize the board as an empty string.
 
+  for (let row = 0; row < x; row++) {
+    let line = ''; // Reset the line for each row.
+
+    for (let col = 0; col < x; col++) {
+      // Alternate between spaces and hashes for the chessboard pattern.
+      if ((row + col) % 2 === 0) {
+        line += ' ';
+      } else {
+        line += '#';
+      }
+    }
+
+    board += line + '\n'; // Add the line to the board and add a newline.
+  }
+
+  console.log(board);
 }
+
+
+  
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
